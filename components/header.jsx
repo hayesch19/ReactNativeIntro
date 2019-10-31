@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { View, Image, StyleSheet } from 'react-native'
+import HeroLogo from '../images/FortyNineRideLogo.png'
 
-const header = () => {
-  return (
-    <div>
-      <h1>Header</h1>
-    </div>
-  )
+export default class Header extends Component {
+  render() {
+    return (
+      <View>
+        <Image style={styles.stretch} source={HeroLogo} />
+      </View>
+    )
+  }
 }
 
-export default header
+const styles = StyleSheet.create({
+  stretch: {
+    width: 200,
+    height: 100,
+    resizeMode: 'stretch'
+  }
+})
