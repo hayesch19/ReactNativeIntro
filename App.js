@@ -1,13 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { NativeRouter, Route } from 'react-router-native'
 import Header from './components/header'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header />
-      <Text>Hello World!</Text>
-    </View>
+    <NativeRouter>
+      <View style={styles.container}>
+        <Header />
+      </View>
+      <View>
+        <Route exact path="/" component={Home} />
+      </View>
+    </NativeRouter>
   )
 }
 
